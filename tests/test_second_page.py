@@ -15,5 +15,5 @@ def test_app_running(setup_app):
 
 def test_app_visible(setup_app):
     with setup_app.test_client() as client:
-        response = client.get("/")
-        assert b'Chachia application second page' in response.data
+        response = client.get("/page2")
+        assert b'Welcome to the page 2' in response.data

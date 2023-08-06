@@ -7,4 +7,5 @@ numpy
 datetime
 flask
 socket
+flake8
 pytest

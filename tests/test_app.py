@@ -16,4 +16,4 @@ def test_app_running(setup_app):
 def test_app_visible(setup_app):
     with setup_app.test_client() as client:
         response = client.get("/")
-        assert b'Chachia application main page' in response.data
+        assert b'The hostname of the container is' in response.data

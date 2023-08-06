@@ -14,7 +14,7 @@ def index():
         return render_template('error.html')
     
 @app.route("/page2")
-def index():
+def second_page():
     print('Flask app second page is called')
     try:
         return render_template('page2.html')
