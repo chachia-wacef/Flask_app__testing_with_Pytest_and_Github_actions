@@ -1,0 +1,25 @@
+name: app-docker-image-building-workflow
+
+on:
+  push:
+    branches: none #["master"] #I've commented out the triggers so as not to launch this workflow only manually.
+    paths-ignore:
+        - 'README.md'
+        - '.gitignore'
+  pull_request:
+    branches: none #["master"]
+    paths-ignore:
+        - 'README.md'
+        - '.gitignore'
+
+  workflow_dispatch:
+
+jobs:
+  container-building:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Build the app Docker image
+      working-directory: app
+      run: docker build . --file Dockerfile --tag my-flask-app-chachia:$(date +%s)
