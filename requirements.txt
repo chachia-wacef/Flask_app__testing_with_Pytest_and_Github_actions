@@ -1,11 +1,2 @@
-pickle
-base64
-io
-dotenv
-pandas
-numpy
-datetime
-flask
-socket
-flake8
-pytest
+flask==2.2.2
+pytest==7.4.0
