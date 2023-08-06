@@ -1,0 +1,10 @@
+pickle
+base64
+io
+dotenv
+pandas
+numpy
+datetime
+flask
+socket
+pytest
